@@ -1,21 +1,21 @@
 ##BASE DE DATOS: album
 ##owner admin --- admin
 
-CREATE TABLE public."user"
+CREATE TABLE public."usuario"
 (
-    email text NOT NULL,
-    password text NOT NULL
+    correo text NOT NULL,
+    contrasena text NOT NULL
 )
 WITH (
     OIDS = FALSE
 )
 TABLESPACE pg_default;
 
-ALTER TABLE public."user"
+ALTER TABLE public."usuario"
     OWNER to admin;
 
 
-    
+
 
 CREATE TABLE public.ficha
 (

@@ -19,5 +19,5 @@ public interface interfaceUser {
 
     public void eliminar(User us);
 
-    public ArrayList<User> Consultar();
+    public boolean Consultar(User us);
 }
