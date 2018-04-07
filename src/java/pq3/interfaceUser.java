@@ -13,7 +13,7 @@ import pq2.User;
  * @author santiagob20
  */
 public interface interfaceUser {
-    public void insertar(User us);
+    public boolean insertar(User us);
 
     public void editar(User us);
 

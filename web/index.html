@@ -14,21 +14,22 @@
     <form class="form-signin" action="Login">
       <div class="text-center mb-4">
         <img class="mb-4" src="img/logo.png" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Control de monas :v</h1>
-        <p><code>Logueate acá abajo</code></p>
+        <h1 class="h3 mb-3 font-weight-normal">Control de Fichas del mundial Rusia 2018</h1>
       </div>
 
       <div class="form-label-group">
-        <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
+        <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
         <label for="inputEmail">Correo electrónico</label>
       </div>
 
       <div class="form-label-group">
-        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+        <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Contraseña" required>
         <label for="inputPassword">Contraseña</label>
       </div>
 
         <button class="btn btn-lg btn-primary btn-block" type="submit" value="Login">Ingresar</button>
+        <br>
+        <label onclick="location='crearUser.html'" onmouseover="JavaScript:this.style.cursor='pointer'; this.style.color='cyan' " onmouseout="this.style.color='white'">¿No tienes usuario? Crea uno dando click acá</label>
       <p class="mt-5 mb-3 text-muted text-center">&copy;2018</p>
     </form>
   </body>

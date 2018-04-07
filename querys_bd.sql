@@ -3,8 +3,11 @@
 
 CREATE TABLE public."usuario"
 (
+    nombre text NOT NULL,
+    apellido text NOT NULL,
     correo text NOT NULL,
-    contrasena text NOT NULL
+    contrasena text NOT NULL,
+    pais text NOT NULL,
 )
 WITH (
     OIDS = FALSE

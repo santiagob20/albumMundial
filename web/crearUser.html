@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Crear usuario</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/album.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="collapse bg-dark" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4 class="text-white">&copy;2018</h4>
+                            <img src="img/logo.png">
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h4 class="text-white">Menu</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="principal.html" class="text-white">Menu Principal</a></li>  
+                                <li><a href="crearUser.html" class="text-white">Crear usuario</a></li>
+                                <li><a href="tablaFichas.html" class="text-white">Ingresar Fichas encontradas</a></li>
+                                <li><a href="album.jsp" class="text-white">Ver Fichas</a></li>
+                                <li><a href="index.html" class="text-white">Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-dark bg-dark box-shadow">
+                <div class="container d-flex justify-content-between">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <img src="img/logo.png" width="20" height="20">
+
+                        <strong>Crear Usuario</strong>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main role="main">
+
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <div class="py-5 text-center">
+                        <img class="d-block mx-auto mb-4" src="img/logo.png" alt="" width="72" height="72">
+                        <h2 style="color: #171a1d">Crear Usuario</h2>
+                        <p class="lead" style="color: #171a1d">Ingresa tus datos a continuación para crear tu usuario</p>
+                    </div>
+
+                    <div class="row">
+                        <
+                        <div class="col-md-8 order-md-1">
+                            <h4 class="mb-3" style="color: #171a1d">Datos Personales</h4>
+                            <form class="needs-validation" novalidate action="guardarUser">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" style="color: #171a1d">Nombres</label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="Ingrese su nombre" value="" required>
+                                        <div class="invalid-feedback">
+                                            El campo no es válido
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" style="color: #171a1d">Apellidos</label>
+                                        <input type="text" class="form-control" id="lastName" placeholder="ingrese sus apellidos" value="" required>
+                                        <div class="invalid-feedback">
+                                            El campo no es válido
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" style="color: #171a1d">Correo electrónico </label>
+                                    <input type="email" class="form-control" id="email" placeholder="tu@ejemplo.com">
+                                    <div class="invalid-feedback">
+                                        El correo no es válido
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="address" style="color: #171a1d">Contraseña</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                                    <div class="invalid-feedback">
+                                        Ingrese una contraseña válida
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 mb-3">
+                                        <label for="country" style="color: #171a1d">País Latinoamericano</label>
+                                        <select class="custom-select d-block w-100" id="country" required>
+                                            <option value="">Elija...</option>
+                                            <option>Argentina</option>
+                                            <option>Bolivia</option>
+                                            <option>Brasil</option>
+                                            <option>CHile</option>
+                                            <option>Colombia</option>
+                                            <option>Costa Rica</option>
+                                            <option>Costa Rica</option>
+                                            <option>Cuba</option>
+                                            <option>Ecuador</option>
+                                            <option>Guayana Francesa</option>
+                                            <option>Granada</option>
+                                            <option>Guatemala</option>
+                                            <option>Honduras</option>
+                                            <option>Jamaica</option>
+                                            <option>México</option>
+                                            <option>Nicaragua</option>
+                                            <option>Paraguay</option>
+                                            <option>Panamá</option>
+                                            <option>Perú</option>
+                                            <option>Puerto Rico</option>
+                                            <option>República Dominicana</option>
+                                            <option>Uruguay</option>
+                                            <option>Venezuela</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            elija un país
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="mb-4">
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Guardar usuario</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-muted">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#">Volver al inicio</a>
+                </p>
+                <p>Todos los derechos reservados &copy; Panini 2018.</p>
+            </div>
+        </footer>
+
+        <!-- Nucleo Bootstrap en JavaScript
+        ================================================== -->
+        <!-- Se pone al final del documento para que la pagina cargue más rápido -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+        <script src="js/vendor/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/vendor/holder.min.js"></script>
+        <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+    </body>
+</html>

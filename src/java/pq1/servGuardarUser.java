@@ -6,6 +6,7 @@
 package pq1;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,32 +14,43 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import pq2.User;
 import pq4.operUser;
+
 /**
  *
  * @author santiagob20
  */
-@WebServlet(name = "servLogin", urlPatterns = {"/Login"})
-public class servLogin extends HttpServlet {
+@WebServlet(name = "guardarUser", urlPatterns = {"/guardarUser"})
+public class servGuardarUser extends HttpServlet {
 
-    User us = new User();
-    operUser opUser = new operUser();
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        User us = new User();
+        operUser opUser = new operUser();
+        us.setNombre(request.getParameter("firstName"));
+        us.setApellido(request.getParameter("lastName"));
+        us.setCorreo(request.getParameter("email"));
+        us.setPassword(request.getParameter("password"));
+        us.setPais(request.getParameter("country"));
+        System.out.println(us.getNombre());
         
+        opUser.insertar(us);
         
-        us.setCorreo(request.getParameter("inputEmail"));
-        us.setPassword(request.getParameter("inputPassword"));
-        System.out.println("user: "+us.getCorreo());
-        boolean rta = opUser.Consultar(us);
-        if(rta=true){
+        boolean result=opUser.insertar(us);
+        if(result=true){
             response.sendRedirect("principal.html");
-        }else
-        {
-            response.sendRedirect("index.html");
         }
-        }
-    
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -68,7 +80,6 @@ public class servLogin extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
     }
-
 
     /**
      * Returns a short description of the servlet.

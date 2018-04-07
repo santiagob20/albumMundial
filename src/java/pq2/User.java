@@ -10,15 +10,42 @@ package pq2;
  * @author santiagob20
  */
 public class User {
-    String email;
+    String nombre;
+    String apellido;
+    String correo;
     String password;
+    String pais;
 
-    public String getEmail() {
-        return email;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     public String getPassword() {

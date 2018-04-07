@@ -37,3 +37,14 @@ footer p {
 }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.checkboxx
+{
+    text-align: center;
+    color: black;
+    margin-top: 10 px;
+    padding: 10 px;
+    margin-bottom: 10 px;
+    margin-left: 10 px;
+    margin-right: 10 px;
+}

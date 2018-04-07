@@ -23,28 +23,33 @@ import pq3.interfaceUser;
 public class operUser implements interfaceUser{
 
     @Override
-    public void insertar(User us) {
+    public boolean insertar(User us) {
         Conexion cn = new Conexion();
+        boolean auth= false;
         
-        Connection c = cn.conectar();
         
-        if(c!=null){
+        if(cn!=null){
             
         try
         {
-            cn.conectar();
-            System.out.println("conectado!");
-            PreparedStatement st = c.prepareStatement("INSERT  INTO usuario VALUES(?,?)");
-            st.setString(1,us.getEmail());
-            st.setString(2,us.getPassword());
-            st.executeUpdate();
             
-            System.out.println(us.getEmail());
+            System.out.println("conectado!");
+            PreparedStatement st = cn.conectar().prepareStatement("INSERT INTO usuario(nombre,apellido,correo,contrasena,pais) VALUES(?,?,?,?,?);");
+            st.setString(1,us.getNombre());
+            st.setString(2,us.getApellido());
+            st.setString(3,us.getCorreo());
+            st.setString(4,us.getPassword());
+            st.setString(5,us.getPais());
+            st.executeUpdate();
+            auth = true;
+            System.out.println(us.getCorreo());
             System.out.println(us.getPassword());
+            return auth;
         }catch (SQLException ex) {
             Logger.getLogger(operUser.class.getName()).log(Level.SEVERE, null, ex);
         }
         }
+        return auth;
     }
 
     @Override
@@ -60,33 +65,36 @@ public class operUser implements interfaceUser{
     @Override
     public boolean Consultar(User us) {
         Conexion cn = new Conexion();
-        boolean auth = false;
-        Connection c = cn.conectar();      
-        if(c!=null){
+            
+         boolean auth = false;
+            
+        if(cn!=null){
             
         try
         {
             cn.conectar();
             System.out.println("conectado!");
-            PreparedStatement st = c.prepareStatement("SELECT * FROM usuario WHERE correo = ? AND contrasena = ?");
-            st.setString(1,us.getEmail());
+            PreparedStatement st = cn.conectar().prepareStatement("SELECT * FROM usuario WHERE correo = ? AND contrasena = ?");
+            st.setString(1,us.getCorreo());
             st.setString(2,us.getPassword());
             ResultSet rs = st.executeQuery();
-            System.out.println(rs.toString());
+            System.out.println(rs.getString("correo"));
             while(rs.next())
             {
                 auth = true;
+                System.out.println(us.getCorreo());
+                System.out.println(us.getPassword());
             }
-            System.out.println(us.getEmail());
-            System.out.println(us.getPassword());
+            auth=true;
+            return auth;
             
-            auth = true;
+            
         
         } catch (SQLException ex) {
             Logger.getLogger(operUser.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        System.out.println(auth);
+        System.out.println("auth: "+auth);
        
         }
         return auth;
