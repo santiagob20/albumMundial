@@ -1,36 +1,39 @@
 <!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content=""> 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/floating-labels.css" rel="stylesheet">
-    <title>Login</title>
-  </head>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content=""> 
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/floating-labels.css" rel="stylesheet">
+        <script src="js/libs/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="js/libs/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="js/clienteLogin.js" type="text/javascript"></script>
+        <title>Login</title>
+    </head>
 
-  <body>
-    <form class="form-signin" action="Login">
-      <div class="text-center mb-4">
-        <img class="mb-4" src="img/logo.png" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Control de Fichas del mundial Rusia 2018</h1>
-      </div>
+    <body>
+        <form class="form-signin">
+            <div class="text-center mb-4">
+                <img class="mb-4" src="img/logo.png" alt="" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">Control de Fichas del mundial Rusia 2018</h1>
+            </div>
 
-      <div class="form-label-group">
-        <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
-        <label for="inputEmail">Correo electrónico</label>
-      </div>
+            <div class="form-label-group">
+                <input type="text" id="txtUser" name="txtUser" placeholder="Usuario Registrado" class="form-control">
+                <label for="txtUser">Usuario Registrado</label>
+            </div>
 
-      <div class="form-label-group">
-        <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Contraseña" required>
-        <label for="inputPassword">Contraseña</label>
-      </div>
+            <div class="form-label-group">
+                <input type="password" id="txtPassword" name="txtPassword" placeholder="" class="form-control" >
+                <label for="txtPassword">Contraseña</label>
+            </div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Login">Ingresar</button>
-        <br>
-        <label onclick="location='crearUser.html'" onmouseover="JavaScript:this.style.cursor='pointer'; this.style.color='cyan' " onmouseout="this.style.color='white'">¿No tienes usuario? Crea uno dando click acá</label>
-      <p class="mt-5 mb-3 text-muted text-center">&copy;2018</p>
-    </form>
-  </body>
+            <button class="btn btn-lg btn-primary btn-block" id="btnLogin" type="button" >Ingresar</button>
+            <br>
+            <label onclick="location = 'crearUser.html'" onmouseover="JavaScript:this.style.cursor = 'pointer'; this.style.color = 'cyan'" onmouseout="this.style.color = 'white'">¿No tienes usuario? Crea uno dando click acá</label>
+            <p class="mt-5 mb-3 text-muted text-center">&copy;2018</p>
+        </form>
+    </body>
 </html>

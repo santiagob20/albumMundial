@@ -5,6 +5,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
+        <script src="js/popper.min.js" type="text/javascript"></script>
+        <link href="css/album.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <style>
+            .buttonP {
+                border-radius: 4px;
+                background-color: #B40404;
+                border: none;
+                color: #AAAAA;
+                text-align: center;
+                font-size: 20px;
+                padding: 20px;
+                width: 200px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+            }
+
+            .buttonP span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .buttonP span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .buttonP:hover span {
+                padding-right: 25px;
+            }
+
+            .buttonP:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+        </style>
         <style>
             .fondo{
                 z-index: -2;
@@ -12,7 +56,7 @@
             }
             .txt{
                 align-content: center;
-                
+
                 position: absolute;
             }
         </style>
@@ -70,38 +114,33 @@
                     <br>
                     <br>
                 </div>
-                <div class="col-md-12 order-md-1">
-                    <h4 class="mb-3" style="color: #d5d5d5">Usuarios Registrados</h4>
+                <div class="col-md-12 order-md-12">
+                    <label class="mb-3" id="nombreUser" style="color: #d5d5d5">test</label>
 
-                </div>
-                <form class="form-signin"action="album.jsp">
+                <form class="form-signin"action="album.html">
                     <div class="row">
                         <div class="col-md-4">
                             <br>
                         </div>
                     </div>
-                     <div class="row">
-                         <div class="col-md-4">
-                            
+
+                    <div class="row">
+                        <div class="col-md-4">
+
                         </div>
                         <div class="col-md-4">
-                            <button class="btn" type="submit" onclick="location = 'album.jsp'">Admin</button>
-                        </div>
-                     </div>
-                     <div class="row">
-                         <div class="col-md-4">
-                            
+
                         </div>
                         <div class="col-md-4">
                             <br>
-                            <button class="btn" type="submit" onclick="location = 'album.jsp'" >User</button>
+                            <button class="buttonP" type="submit" ><span>Ver Laminas</span></button>
                         </div>
                     </div>
-                    
+
                 </form>
 
             </section>
-            <img class="fondo" src="img/wallpaper2.png" width=100% height=100%>
+            <img class="fondo" src="img/wallpaper2.jpg" width=100% height=100%>
         </main>
 
         <footer class="text-muted">
@@ -118,8 +157,7 @@
         <!-- Se pone al final del documento para que la pagina cargue más rápido -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
-        <script src="js/vendor/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/vendor/holder.min.js"></script>
+        <script src="js/clienteLogin.js" type="text/javascript"></script>
     </body>
 </html>

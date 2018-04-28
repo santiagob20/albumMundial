@@ -12,7 +12,7 @@ package pq2;
 public class User {
     String nombre;
     String apellido;
-    String correo;
+    String usuario;
     String password;
     String pais;
 
@@ -40,12 +40,12 @@ public class User {
         this.pais = pais;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
     public String getPassword() {
