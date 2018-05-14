@@ -126,7 +126,8 @@ function consultar()
                     data[i].propietario
                 ]).draw(true);
             }
-            console.log(owner);
+            $('txtPropietario').val(data.propietario);
+            owner = data.propietario;
         },
         error : function () {
             alert("Error al consultar");

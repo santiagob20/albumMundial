@@ -84,13 +84,13 @@ public class restServices
         Respuesta rta = new Respuesta();
         operLamina op = new operLamina();
         lista = op.Consultar(us);
-        System.out.println("lista:"+lista.size());
+        log.info("laminas consultadas "+lista.size());
         if(lista!=null)
         {
-            log.info("laminas consultadas "+lista.size());
+            
             //codigo 1 = consultado correctamente
             rta.setCodigo(1);
-            rta.setDescripcion(lista.size()+" Laminas por encontrar");
+            
             rta.setLista(lista);
         }else
         {
@@ -98,6 +98,7 @@ public class restServices
             rta.setCodigo(0);
             rta.setDescripcion("error al buscar sus laminas faltantes");
         }
+        rta.setDescripcion(lista.size()+" Laminas por encontrar");
         return rta;
     }
     
